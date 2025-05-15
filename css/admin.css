@@ -1,0 +1,329 @@
+/* Genel Stil Ayarları */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Modern ve uyumlu bir tema için genel düzenlemeler */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+/* Navbar Stil (Yeni Sistem) */
+nav {
+  background-color: #343a40;
+  color: white;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#logo img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+#logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Menü Linkleri */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #f44336;
+  transform: scale(1.1);
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Giriş ve Kayıt Butonları */
+.login-btn, .register-btn {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 15px;
+}
+
+.login-btn:hover, .register-btn:hover {
+  background-color: #ec971f;
+  transform: translateY(-3px);
+}
+
+/* Arama ve Kategori Filtreleme */
+.search-container {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#searchInput:focus {
+  background-color: #fff2e6;
+}
+
+#categoryFilter {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#categoryFilter:focus {
+  background-color: #fff2e6;
+}
+
+/* Hamburger Menü */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover .bar {
+  background-color: #f44336;
+}
+
+/* Mobil Görünüm */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px;
+  }
+}
+
+/* Admin Panel ve Kutular */
+.admin-panel {
+  padding: 100px 20px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section, .list-section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+input[type="text"], textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+  border-color: #f44336;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button[type="button"].btn {
+  background-color: #ccc;
+}
+
+button[type="button"].btn:hover {
+  background-color: #bbb;
+}
+
+/* Admin panel listeleme */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Engelleme */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-left, footer .footer-middle, footer .footer-right {
+  flex: 1;
+}
+
+footer .social-link {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .social-link:hover {
+  color: #f4a261;
+}

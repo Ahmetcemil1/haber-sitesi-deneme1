@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+/*  
+
+ 1.       font-family: "Ibarra Real Nova", serif;
+
+
+
+ 2.        font-family: "Alegreya", serif;
+
+
+
+
+ 3.        font-family: "Prata", serif;
+*/
+
+/* Karanlık Mod Font Uyumu */
+body.dark-mode {
+  font-family: "Noto Serif", serif;
+  color: #e0e0e0;
+}
+
+h1.dark-mode, h2.dark-mode, h3.dark-mode {
+  font-family: "Prata", serif;
+  color: #ffffff;
+}
+
+p.dark-mode {
+  font-family: "Alegreya", serif;
+  color: #d0d0d0;
+}
